@@ -207,7 +207,7 @@
   window.addEventListener("scroll", function () {
     scrollpos = window.pageYOffset;
 
-    if (scrollpos >= header_height) {
+    if (scrollpos >= header_height-10) {
       add_class_on_scroll();
     } else {
       remove_class_on_scroll();
