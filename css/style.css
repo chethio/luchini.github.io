@@ -196,7 +196,6 @@ ol {
   width: 100%;
 }
 .primary-btn:hover {
-  
   background-position: left bottom;
 }
 
@@ -232,58 +231,126 @@ ol {
   left: 0;
   z-index: 999999;
   background: #000;
+  overflow: hidden;
 }
 
 .loader {
-  width: 40px;
-  height: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -13px;
-  margin-left: -13px;
-  border-radius: 60px;
-  animation: loader 0.8s linear infinite;
-  -webkit-animation: loader 0.8s linear infinite;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes loader {
+.svg_leao {
+  fill: #00ff26;
+
+  stroke-dasharray: 6893;
+}
+
+.path_leao {
+  stroke: 0 0 10px #00ff26;
+  stroke-width: 2px;
+  stroke-dasharray: 6893;
+  animation: infinite 8s lion;
+}
+.leao-text {
+  margin-top: 25px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-left: 25px;
+  /* color: #00ff26; */
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #00ff26;
+  text-shadow: 0 0 10px #00ff26;
+
+  font-size: 35px;
+  animation: infinite 7s leao-text_animation;
+}
+@keyframes leao-text_animation {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
+    fill-opacity: 0;
+    stroke-dashoffset: 6893;
   }
-  50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    border: 4px solid #00b612;
-    border-left-color: transparent;
+  25% {
+    fill-opacity: 0;
+    stroke: #00ff26;
+    -webkit-filter: drop-shadow(0px 0px 10px #00ff26);
+    filter: drop-shadow(0px 0px 10px #00ff26);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
   }
 }
-@-webkit-keyframes loader {
+@keyframes lion {
   0% {
-    -webkit-transform: rotate(0deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
+    fill-opacity: 0;
+    stroke-dashoffset: 6893;
   }
-  50% {
-    -webkit-transform: rotate(180deg);
-    border: 4px solid #00b612;
-    border-left-color: transparent;
+  25% {
+    fill-opacity: 0;
+    stroke: #00ff26;
+    -webkit-filter: drop-shadow(0px 0px 10px #00ff26);
+    filter: drop-shadow(0px 0px 10px #00ff26);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
+    fill-opacity: 1;
+    color: #00ff26;
+    stroke-dashoffset: 0;
   }
 }
+@-moz-keyframes lion {
+  0% {
+    fill-opacity: 0;
+    stroke-dashoffset: 6893;
+  }
+  25% {
+    fill-opacity: 0;
+    stroke: #00ff26;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+    stroke: none;
+  }
+}
+
+@-webkit-keyframes lion {
+  0% {
+    fill-opacity: 0;
+    stroke-dashoffset: 6893;
+  }
+  25% {
+    fill-opacity: 0;
+    stroke: #000;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+    stroke: none;
+  }
+}
+
+@-o-keyframes lion {
+  0% {
+    fill-opacity: 0.5;
+    stroke-dashoffset: 6893;
+  }
+  25% {
+    fill-opacity: 0;
+    stroke: #00ff26;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+    stroke: none;
+  }
+}
+
+/* end of preloader */
+
 /*---------------------
   Header
 -----------------------*/
