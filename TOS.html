@@ -78,56 +78,6 @@ Message @furni</a>
         <div id="mobile-menu-wrap"></div>
       </div>
     </header>
-
-    <style>
-      /* Style the navbar */
-      #navbar {
-        transition: 0.5s;
-        overflow: hidden;
-      }
-
-      /* Navbar links */
-      #navbar a {
-      }
-
-      /* Page content */
-      .content {
-        padding: 16px;
-      }
-
-      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-      .sticky {
-        position: fixed;
-        background-color: #000000 !important;
-        top: 0;
-        width: 100%;
-      }
-
-      /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-      .sticky + .content {
-        padding-top: 60px;
-      }
-    </style>
-    <script>
-      let scrollpos = window.scrollY;
-      const header = document.querySelector("#navbar");
-      const header_height = header.offsetHeight;
-
-      const add_class_on_scroll = () => header.classList.add("sticky");
-      const remove_class_on_scroll = () => header.classList.remove("sticky");
-
-      window.addEventListener("scroll", function () {
-        scrollpos = window.pageYOffset;
-
-        if (scrollpos >= header_height) {
-          add_class_on_scroll();
-        } else {
-          remove_class_on_scroll();
-        }
-
-        console.log(scrollpos);
-      });
-    </script>
     <!-- Header End -->
 
     <!-- Hero Section End -->
