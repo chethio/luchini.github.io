@@ -686,10 +686,21 @@ ol {
 .counter__content {
   padding: 0px 50px;
 }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 .counter__item {
-  border: 2px solid #00ff26; 
- box-shadow: 0 0 25px #00ff26;
+  border: 2px solid #00ff26;
+  box-shadow: 0 0 25px #00ff26;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -965,11 +976,11 @@ ol {
   Footer
 -----------------------*/
 .footer {
-  background:linear-gradient(0deg, rgba(0,0,0, 0.9), rgba(0,0,0, 0.9)), url('../img/hero/hero-1.jpg');
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../img/hero/hero-1.jpg");
   background-size: cover;
   background-position: 0% 65%;
   background-repeat: no-repeat;
-
 }
 
 .footer__top {
@@ -2304,36 +2315,39 @@ ol {
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
-} 
+}
 
-
-.social ul{
+.social ul {
   position: absolute;
-  top: 50%;  width: 100%;  text-align: center;
+  top: 50%;
+  width: 100%;
+  text-align: center;
   transform: translateY(-50%);
 }
-.social ul li{
+.social ul li {
   list-style: none;
   display: inline-block;
   margin: 0 15px;
 }
-.social ul li a{
+.social ul li a {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  width: 50px;  height: 50px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  color: #ffffff;  background: #393737;
-  transition: .5s;
+  color: #ffffff;
+  background: #393737;
+  transition: 0.5s;
   box-sizing: border-box;
-  border: 5px solid transparent; 
+  border: 5px solid transparent;
 }
-.social ul li a .fa{
+.social ul li a .fa {
   font-size: 17px;
   line-height: calc(50px - 10px);
 }
-.social ul li:hover a{
- color: #00ff26;
- border: 5px solid #00ff26; 
- box-shadow: 0 0 20px #00ff26;
+.social ul li:hover a {
+  color: #00ff26;
+  border: 5px solid #00ff26;
+  box-shadow: 0 0 20px #00ff26;
 }
