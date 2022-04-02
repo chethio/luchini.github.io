@@ -688,7 +688,7 @@ ol {
 }
 
 .counter__item {
-  background: #00b612;
+  background: #ff0000;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
