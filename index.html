@@ -27,8 +27,13 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-  </head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+  </head>
   <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -181,10 +186,10 @@
     <section class="services spad">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
+          <div data-aos="fade-right" class="col-lg-8">
             <img src="img/c2.gif" style="width:30em" alt="" srcset="">
           </div>
-          <div class="col-lg-4">
+          <div data-aos="fade-left" class="col-lg-4">
             <div class="services__title">
               <div class="section-title">
                 <span>Party lions</span>
@@ -208,8 +213,8 @@
     <section class="work">
       <div class="work__gallery">
         <div class="grid-sizer"></div>
-        <div
-          class="work__item wide__item set-bg"
+        <div data-aos="fade-up"
+          class="work__item wide__item set-bg" 
           data-setbg="img/gallery/0.png"
         >
           <a
@@ -218,7 +223,7 @@
             ><i class="fa fa-play"></i
           ></a>
         </div>
-        <div
+        <div data-aos="fade-up"
           class="work__item small__item set-bg"
           data-setbg="img/gallery/1.png"
         >
@@ -228,7 +233,7 @@
             ><i class="fa fa-play"></i
           ></a>
         </div>
-        <div
+        <div data-aos="fade-up"
           class="work__item small__item set-bg"
           data-setbg="img/gallery/3.png"
         >
@@ -237,8 +242,8 @@
             class="play-btn video-popup"
             ><i class="fa fa-play"></i
           ></a>
-        </div>
-        <div
+        </div> 
+        <div data-aos="fade-up"
           class="work__item large__item set-bg"
           data-setbg="img/gallery/4.png"
         >
@@ -248,7 +253,7 @@
             ><i class="fa fa-play"></i
           ></a>
         </div>
-        <div
+        <div data-aos="fade-up"
           class="work__item small__item set-bg"
           data-setbg="img/gallery/5.png"
         >
@@ -258,7 +263,7 @@
             ><i class="fa fa-play"></i
           ></a>
         </div>
-        <div
+        <div data-aos="fade-up"
           class="work__item small__item set-bg"
           data-setbg="img/gallery/6.png"
         >
@@ -268,7 +273,7 @@
             ><i class="fa fa-play"></i
           ></a>
         </div>
-        <div
+        <div data-aos="fade-up"
           class="work__item wide__item set-bg"
           data-setbg="img/gallery/7.png"
         >
@@ -1042,5 +1047,10 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
   </body>
 </html>
