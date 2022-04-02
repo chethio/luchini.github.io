@@ -166,36 +166,39 @@
   /*------------------
         Counter
     --------------------*/
-  //   $(window).scroll(function () {
-  //     // This is then function used to detect if the element is scrolled into view
-  //     function elementScrolled(elem) {
-  //       var docViewTop = $(window).scrollTop();
-  //       var docViewBottom = docViewTop + $(window).height();
-  //       var elemTop = $(elem).offset().top;
-  //       return elemTop <= docViewBottom && elemTop >= docViewTop;
-  //     }
+  var counter_seen = 0;
+  $(window).scroll(() => {
+    // This is then function used to detect if the element is scrolled into view
+    function elementScrolled(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+      var elemTop = $(elem).offset().top;
+      return elemTop <= docViewBottom && elemTop >= docViewTop;
+    }
 
-  //     // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
-  //     if (elementScrolled(".counter__content")) {
-  // Your function here
-  $(".counter_num").each(function () {
-    $(this)
-      .prop("Counter", 0)
-      .animate(
-        {
-          Counter: $(this).text(),
-        },
-        {
-          duration: 4000,
-          easing: "swing",
-          step: function (now) {
-            $(this).text(Math.ceil(now));
-          },
-        }
-      );
+    // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
+    if (elementScrolled(".counter__content") && counter_seen == 0) {
+      counter_seen = 1;
+      // Your function here
+      $(".counter_num").each(function () {
+        var num = $(this).text();
+        $(this)
+          .prop("Counter", 0)
+          .animate(
+            {
+              Counter: $(this).text(),
+            },
+            {
+              duration: 4000,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              },
+            }
+          );
+      });
+    }
   });
-  //     }
-  //   });
 
   let scrollpos = window.scrollY;
   const header = document.querySelector("#navbar");
@@ -207,12 +210,10 @@
   window.addEventListener("scroll", function () {
     scrollpos = window.pageYOffset;
 
-    if (scrollpos >= header_height-10) {
+    if (scrollpos >= header_height - 10) {
       add_class_on_scroll();
     } else {
       remove_class_on_scroll();
     }
-
-    console.log(scrollpos);
   });
 })(jQuery);
