@@ -242,111 +242,64 @@ ol {
 }
 
 .svg_leao {
-  fill: #00ff26;
   margin-left: -10px;
-
-  stroke-dasharray: 6893;
+  width: 300px;
+  stroke-dasharray: 8500;
 }
 
 .path_leao {
-  stroke: 0 0 10px #00ff26;
   stroke-width: 2px;
-  stroke-dasharray: 6893;
+  stroke-dasharray: 8500;
+  stroke-dashoffset: 8500;
   animation: infinite 8s lion;
-}
-.leao-text {
-  margin-top: 25px;
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-left: 14px;
-  /* color: #00ff26; */
-  color: transparent;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #00ff26;
-  text-shadow: 0 0 10px #00ff26;
-
-  font-size: 35px;
-  animation: infinite 7s leao-text_animation;
-}
-@keyframes leao-text_animation {
-  0% {
-    fill-opacity: 0;
-    stroke-dashoffset: 6893;
-  }
-  25% {
-    fill-opacity: 0;
-    stroke: #00ff26;
-    -webkit-filter: drop-shadow(0px 0px 10px #00ff26);
-    filter: drop-shadow(0px 0px 10px #00ff26);
-  }
-  100% {
-    fill-opacity: 1;
-    stroke-dashoffset: 0;
-  }
 }
 @keyframes lion {
   0% {
-    fill-opacity: 0;
-    stroke-dashoffset: 6893;
-  }
-  25% {
-    fill-opacity: 0;
-    stroke: #00ff26;
-    -webkit-filter: drop-shadow(0px 0px 10px #00ff26);
-    filter: drop-shadow(0px 0px 10px #00ff26);
+    stroke: #00ff26;  
+    stroke: 0 0 10px #00ff26;
+
   }
   100% {
-    fill-opacity: 1;
-    color: #00ff26;
+    stroke: #00ff26;
+    stroke: 0 0 10px #00ff26;
+    fill: #00ff26;
     stroke-dashoffset: 0;
   }
 }
 @-moz-keyframes lion {
   0% {
-    fill-opacity: 0;
-    stroke-dashoffset: 6893;
-  }
-  25% {
-    fill-opacity: 0;
     stroke: #00ff26;
+    
   }
   100% {
-    fill-opacity: 1;
+    stroke: #00ff26;
+    -webkit-filter: drop-shadow(0px 0px 10px #00ff26);
+    filter: drop-shadow(0px 0px 10px #00ff26);
     stroke-dashoffset: 0;
-    stroke: none;
   }
 }
 
 @-webkit-keyframes lion {
   0% {
-    fill-opacity: 0;
-    stroke-dashoffset: 6893;
-  }
-  25% {
-    fill-opacity: 0;
-    stroke: #000;
+    stroke: #00ff26;
   }
   100% {
-    fill-opacity: 1;
+    stroke: #00ff26;
+    -webkit-filter: drop-shadow(0px 0px 10px #00ff26);
+    filter: drop-shadow(0px 0px 10px #00ff26);
     stroke-dashoffset: 0;
-    stroke: none;
   }
 }
 
 @-o-keyframes lion {
   0% {
-    fill-opacity: 0.5;
-    stroke-dashoffset: 6893;
-  }
-  25% {
-    fill-opacity: 0;
     stroke: #00ff26;
   }
   100% {
-    fill-opacity: 1;
+    stroke: #00ff26;
+    -webkit-filter: drop-shadow(0px 0px 10px #00ff26);
+    filter: drop-shadow(0px 0px 10px #00ff26);
     stroke-dashoffset: 0;
-    stroke: none;
   }
 }
 
@@ -687,15 +640,15 @@ ol {
   padding: 0px 50px;
 }
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .counter__item {
