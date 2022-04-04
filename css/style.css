@@ -244,25 +244,25 @@ ol {
 .svg_leao {
   margin-left: -10px;
   width: 300px;
-  stroke-dasharray: 8500;
+  /* stroke-dasharray: 8500; */
 }
 
 .path_leao {
   stroke-width: 2px;
-  stroke-dasharray: 8500;
-  stroke-dashoffset: 8500;
-  animation: infinite 8s lion;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: infinite 4s lion;
 }
 @keyframes lion {
   0% {
-    stroke-dashoffset: 8500;
     stroke: #00ff26;
     stroke: 0 0 10px #00ff26;
   }
   100% {
     stroke: #00ff26;
     stroke: 0 0 10px #00ff26;
-    fill: #00ff26;
+    -webkit-filter: drop-shadow(0px 0px 5px #00ff26);
+    filter: drop-shadow(0px 0px 5px #00ff26);
     stroke-dashoffset: 0;
   }
 }
