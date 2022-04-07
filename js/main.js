@@ -227,7 +227,7 @@ for (let index = 1; index <= 50; index++) {
   div2.classList = "portfolio__item";
 
   let img = document.createElement("img");
-  img.src = "/img/gallery/" + index + ".jpg";
+  img.src = "img/gallery/" + index + ".jpg";
 
   div2.appendChild(img);
   div1.appendChild(div2);
