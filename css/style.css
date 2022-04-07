@@ -146,7 +146,13 @@ ol {
   background-size: cover;
   background-position: top center;
 }
-
+.set-bg2 {
+  width: 75em;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: top left;
+ 
+}
 .spad {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -2299,4 +2305,23 @@ ol {
   color: #00ff26;
   border: 5px solid #00ff26;
   box-shadow: 0 0 20px #00ff26;
+}
+
+.video-container {
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width:991px) {
+  .video-container video {
+    width: 100% ;
+    height: auto ;
+  }
+}
+
+@media (min-width:991px) {
+  .video-container video {
+    width: 30em ;
+    height: auto ;
+  }
 }

@@ -37,7 +37,6 @@
     var bg = $(this).data("setbg");
     $(this).css("background-image", "url(" + bg + ")");
   });
-  
   //Masonary
   $(".work__gallery").masonry({
     itemSelector: ".work__item",
