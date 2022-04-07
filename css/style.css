@@ -745,14 +745,25 @@ ol {
 }
 
 .team__item {
-  border-radius: 30px;
+  
+  border-radius: 300px ;
+}
+@media (min-Width:992px) {
+  .team__item {
+    width: 300px;
+  }
+  .flip-card {
+    width: 300px;
+
+
+  }
 }
 .team__item:hover {
   bottom: 0;
 }
 
 .flip-card {
-  border-radius: 30px;
+  border-radius: 300px;
   background-color: transparent;
   height: 390px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
