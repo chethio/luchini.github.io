@@ -216,3 +216,26 @@
     }
   });
 })(jQuery);
+
+var gallery = document.getElementById("gallery");
+
+for (let index = 1; index <= 50; index++) {
+  let div1 = document.createElement("div");
+  div1.classList = "col-lg-4 col-md-6 col-sm-6 mix wp";
+
+  let div2 = document.createElement("div");
+  div2.classList = "portfolio__item";
+
+  let img = document.createElement("img");
+  img.src = "/img/gallery/" + index + ".jpg";
+
+  div2.appendChild(img);
+  div1.appendChild(div2);
+  gallery.appendChild(div1);
+}
+
+/*<div class="col-lg-4 col-md-6 col-sm-6 mix branding">
+<div class="portfolio__item">
+<img src="img/gallery/1.jpg" alt="" srcset="">
+</div>
+</div>*/
