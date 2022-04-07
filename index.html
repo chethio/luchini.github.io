@@ -20,6 +20,7 @@
     />
 
     <!-- Css Styles -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
@@ -27,6 +28,8 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
   </head>
   <body>
     <!-- Page Preloder -->
@@ -69,12 +72,7 @@
               stroke="none"
               fill-rule="evenodd"
             ></path>
-            <path
-              id="path4"
-              d=""
-              stroke="none"
-              fill-rule="evenodd"
-            ></path>
+            <path id="path4" d="" stroke="none" fill-rule="evenodd"></path>
           </g>
         </svg>
       </div>
@@ -86,7 +84,7 @@
         <div class="row">
           <div class="col-lg-2">
             <div class="header__logo">
-              <a href="./index.html">
+              <a href="./index.html" z>
                 <img style="width: 3em" src="img/logo.svg" alt="" />
               </a>
             </div>
@@ -213,11 +211,11 @@
     <!-- Services Section Begin -->
     <section class="services spad">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <img src="img/c2.gif" style="width: 30em" alt="" srcset="" />
+        <div class="row" style="overflow-x: hidden">
+          <div data-aos="fade-right"   data-aos-duration="500" class="col-lg-8">
+            <img src="img/slide.gif" style="width: 30em" alt="" srcset="" />
           </div>
-          <div class="col-lg-4 mt-3 mt-md-0">
+          <div data-aos="fade-left" data-aos-duration="500"  class="col-lg-4 mt-3 mt-md-0">
             <div class="services__title">
               <div class="section-title">
                 <span>Party lions</span>
@@ -241,76 +239,34 @@
     <section class="work">
       <div class="work__gallery">
         <div class="grid-sizer"></div>
-        <div
+        <div  data-aos="fade-up" data-aos-duration="100"
           class="work__item wide__item set-bg"
-          data-setbg="img/gallery/0.png"
-        >
-          <a
-            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-            class="play-btn video-popup"
-            ><i class="fa fa-play"></i
-          ></a>
-        </div>
-        <div
+          data-setbg="img/gallery/25.jpg"
+        ></div>
+        <div data-aos="fade-up" data-aos-duration="300"
           class="work__item small__item set-bg"
-          data-setbg="img/gallery/1.png"
-        >
-          <a
-            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-            class="play-btn video-popup"
-            ><i class="fa fa-play"></i
-          ></a>
-        </div>
-        <div
+          data-setbg="img/gallery/1.jpg"
+        ></div>
+        <div data-aos="fade-up" data-aos-duration="500"
           class="work__item small__item set-bg"
-          data-setbg="img/gallery/3.png"
-        >
-          <a
-            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-            class="play-btn video-popup"
-            ><i class="fa fa-play"></i
-          ></a>
-        </div>
-        <div
+          data-setbg="img/gallery/3.jpg"
+        ></div>
+        <div data-aos="fade-up" data-aos-duration="700"
           class="work__item large__item set-bg"
-          data-setbg="img/gallery/4.png"
-        >
-          <a
-            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-            class="play-btn video-popup"
-            ><i class="fa fa-play"></i
-          ></a>
-        </div>
-        <div
+          data-setbg="img/gallery/4.jpg"
+        ></div>
+        <div data-aos="fade-up" data-aos-duration="100"
           class="work__item small__item set-bg"
-          data-setbg="img/gallery/5.png"
-        >
-          <a
-            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-            class="play-btn video-popup"
-            ><i class="fa fa-play"></i
-          ></a>
-        </div>
-        <div
+          data-setbg="img/gallery/5.jpg"
+        ></div>
+        <div data-aos="fade-up" data-aos-duration="500"
           class="work__item small__item set-bg"
-          data-setbg="img/gallery/6.png"
-        >
-          <a
-            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-            class="play-btn video-popup"
-            ><i class="fa fa-play"></i
-          ></a>
-        </div>
-        <div
+          data-setbg="img/gallery/6.jpg"
+        ></div>
+        <div data-aos="fade-up" data-aos-duration="700"
           class="work__item wide__item set-bg"
-          data-setbg="img/gallery/7.png"
-        >
-          <a
-            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-            class="play-btn video-popup"
-            ><i class="fa fa-play"></i
-          ></a>
-        </div>
+          data-setbg="img/gallery/7.jpg"
+        ></div>
       </div>
     </section>
     <!-- Work Section End -->
@@ -320,7 +276,7 @@
       <div class="container">
         <div class="counter__content">
           <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div data-aos="fade-up"  class="col-lg-3 col-md-6 col-sm-6">
               <div class="counter__item">
                 <div class="counter__item__text">
                   <img src="img/icons/ci-1.png" alt="" />
@@ -329,7 +285,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div data-aos="fade-down"  class="col-lg-3 col-md-6 col-sm-6">
               <div class="counter__item second__item">
                 <div class="counter__item__text">
                   <img src="img/icons/ci-2.png" alt="" />
@@ -338,7 +294,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div data-aos="fade-up"  class="col-lg-3 col-md-6 col-sm-6">
               <div class="counter__item third__item">
                 <div class="counter__item__text">
                   <img src="img/icons/ci-3.png" alt="" />
@@ -347,7 +303,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div data-aos="fade-down"  class="col-lg-3 col-md-6 col-sm-6">
               <div class="counter__item four__item">
                 <div class="counter__item__text">
                   <img src="img/icons/ci-4.png" alt="" />
@@ -374,7 +330,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+          <div data-aos="fade-up" data-aos-delay="400"  class="col-lg-3 col-md-6 col-sm-6 p-0">
             <div class="team__item flip-card">
               <div class="flip-card-inner">
                 <div
@@ -394,7 +350,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+          <div data-aos="fade-up" data-aos-delay="300"  class="col-lg-3 col-md-6 col-sm-6 p-0">
             <div class="team__item team__item--second set-bg">
               <div class="team__item flip-card">
                 <div class="flip-card-inner">
@@ -416,7 +372,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+          <div data-aos="fade-up" data-aos-delay="200" class="col-lg-3 col-md-6 col-sm-6 p-0">
             <div class="team__item team__item--third set-bg">
               <div class="team__item flip-card">
                 <div class="flip-card-inner">
@@ -438,7 +394,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+          <div data-aos="fade-up" data-aos-delay="100" class="col-lg-3 col-md-6 col-sm-6 p-0">
             <div class="team__item team__item--four set-bg">
               <div class="team__item flip-card">
                 <div class="flip-card-inner">
@@ -471,12 +427,12 @@
     <!-- Team Section End -->
 
     <link rel="stylesheet" href="css/timelins.css" />
-    <section class="timeline">
+    <section style="overflow-x: hidden" class="timeline">
       <div class="container snipcss-x8g5J" b-n2p8tesvas="">
         <!--!--><!--!--><!--!-->
-        <section id="cd-timeline" class="cd-container" b-j7z0dm996t="">
+        <section  id="cd-timeline" class="cd-container" b-j7z0dm996t="">
           <!--!-->
-          <div
+          <div 
             class="cd-timeline-block cd-timeline-block__ending"
             b-8p1ouafmxz=""
           >
@@ -489,10 +445,10 @@
               ></div>
             </div>
             <!--!-->
-            <div class="cd-timeline-content" b-8p1ouafmxz="">
-              <div class="u-px-15" b-8p1ouafmxz="">
-                <div class="row" b-8p1ouafmxz="">
-                  <div
+            <div data-aos="fade-up" class="cd-timeline-content" b-8p1ouafmxz="">
+              <div   class="u-px-15" b-8p1ouafmxz="">
+                <div  class="row" b-8p1ouafmxz="">
+                  <div 
                     class="col-xs-5 col-md-4 col-lg-4 u-pr-0 u-posRelative"
                     b-8p1ouafmxz=""
                   >
@@ -508,11 +464,11 @@
                     />
                   </div>
                   <!--!-->
-                  <div
+                  <div 
                     class="col-xs-7 col-md-8 col-lg-8 mobile"
                     b-8p1ouafmxz=""
                   >
-                    <div class="u-my-15" b-8p1ouafmxz="">
+                    <div  class="u-my-15" b-8p1ouafmxz="">
                       <h2 b-8p1ouafmxz="">
                         <a href="/collectibles/checkers-chicken" b-8p1ouafmxz=""
                           ><strong b-8p1ouafmxz="">WP NFT</strong></a
@@ -524,7 +480,7 @@
                       </p>
                     </div>
                     <!--!-->
-                    <span class="cd-date cd-date1" b-8p1ouafmxz=""
+                    <span  class="cd-date cd-date1" b-8p1ouafmxz=""
                       ><span class="cd-date-month" b-8p1ouafmxz="">Mar</span
                       ><!--!-->
                       <span class="cd-date-day" b-8p1ouafmxz="">30</span
@@ -560,7 +516,7 @@
               ></div>
             </div>
             <!--!-->
-            <div class="cd-timeline-content" b-8p1ouafmxz="">
+            <div data-aos="fade-up" class="cd-timeline-content" b-8p1ouafmxz="">
               <div class="u-px-15" b-8p1ouafmxz="">
                 <div class="row" b-8p1ouafmxz="">
                   <div
@@ -633,7 +589,7 @@
               ></div>
             </div>
             <!--!-->
-            <div class="cd-timeline-content" b-8p1ouafmxz="">
+            <div data-aos="fade-up" class="cd-timeline-content" b-8p1ouafmxz="">
               <div class="u-px-15" b-8p1ouafmxz="">
                 <div class="row" b-8p1ouafmxz="">
                   <div
@@ -705,7 +661,7 @@
               ></div>
             </div>
             <!--!-->
-            <div class="cd-timeline-content" b-8p1ouafmxz="">
+            <div data-aos="fade-up" class="cd-timeline-content" b-8p1ouafmxz="">
               <div class="u-px-15" b-8p1ouafmxz="">
                 <div class="row" b-8p1ouafmxz="">
                   <div
@@ -778,7 +734,7 @@
               ></div>
             </div>
             <!--!-->
-            <div class="cd-timeline-content" b-8p1ouafmxz="">
+            <div data-aos="fade-up" class="cd-timeline-content" b-8p1ouafmxz="">
               <div class="u-px-15" b-8p1ouafmxz="">
                 <div class="row" b-8p1ouafmxz="">
                   <div
@@ -1082,5 +1038,8 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
