@@ -30,6 +30,18 @@
     }
   });
 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+  
   /*------------------
         Background Set
     --------------------*/
@@ -233,6 +245,9 @@ for (let index = 1; index <= 50; index++) {
   div1.appendChild(div2);
   gallery.appendChild(div1);
 }
+
+
+
 
 /*<div class="col-lg-4 col-md-6 col-sm-6 mix branding">
 <div class="portfolio__item">
