@@ -30,18 +30,18 @@
     }
   });
 
-    $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 100) { 
-            $('#scroll').fadeIn(); 
-        } else { 
-            $('#scroll').fadeOut(); 
-        } 
-    }); 
-    $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false; 
-    }); 
-  
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $("#scroll").fadeIn();
+    } else {
+      $("#scroll").fadeOut();
+    }
+  });
+  $("#scroll").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+
   /*------------------
         Background Set
     --------------------*/
@@ -229,26 +229,43 @@
   });
 })(jQuery);
 
-var gallery = document.getElementById("gallery");
+const gallery = document.getElementById("gallery");
+const URL = "img/gallery/";
+const footer = document.querySelector("footer");
+var curImg=1;
+const loadImages = (numImages = 5) => {
+  let i = 1;
+  if (curImg<=50)
+  while (i <= numImages) {
+    let div1 = document.createElement("div");
+    div1.classList = "col-lg-4 col-md-6 col-sm-6 mix wp";
 
-for (let index = 1; index <= 50; index++) {
-  let div1 = document.createElement("div");
-  div1.classList = "col-lg-4 col-md-6 col-sm-6 mix wp";
+    let div2 = document.createElement("div");
+    div2.classList = "portfolio__item";
 
-  let div2 = document.createElement("div");
-  div2.classList = "portfolio__item";
+    let img = document.createElement("img");
+    img.src = URL+ curImg + ".jpg";
 
-  let img = document.createElement("img");
-  img.src = "img/gallery/" + index + ".jpg";
+    div2.appendChild(img);
+    div1.appendChild(div2);
+    gallery.appendChild(div1);
+    i++;
+    curImg++;
+  }
+};
 
-  div2.appendChild(img);
-  div1.appendChild(div2);
-  gallery.appendChild(div1);
-}
+loadImages(5);
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+  console.log(window.innerHeight);
 
-
-
-
+  if (
+    window.scrollY + window.innerHeight >=
+    document.documentElement.scrollHeight-footer.scrollHeight
+  ) {
+    loadImages(5);
+  }
+});
 /*<div class="col-lg-4 col-md-6 col-sm-6 mix branding">
 <div class="portfolio__item">
 <img src="img/gallery/1.jpg" alt="" srcset="">
