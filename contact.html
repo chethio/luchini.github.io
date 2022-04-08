@@ -123,7 +123,7 @@
               </div>
               <div class="contact__widget__item__text">
                 <h4>Address</h4>
-                <p>Los Angeles Gournadi, 1230 Bariasl</p>
+                <p>Maatara, Sri Lanka</p>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@
               </div>
               <div class="contact__widget__item__text">
                 <h4>Hotline</h4>
-                <p>1-677-124-44227 • 1-688-356-66889</p>
+                <p> +94 76 860 6403 </p>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@
               </div>
               <div class="contact__widget__item__text">
                 <h4>Email</h4>
-                <p>Support@gmail.com</p>
+                <p>info@partylionsclub.com</p>
               </div>
             </div>
           </div>
@@ -170,12 +170,12 @@
           <div class="col-lg-6 col-md-6">
             <div class="contact__form">
               <h3>Get in touch</h3>
-              <form action="#">
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Website" />
-                <textarea placeholder="Message"></textarea>
-                <button type="submit" class="site-btn">Send Message</button>
+              <form action="javascript:void();">
+                <input type="text"  placeholder="Name" id="n" required />
+                <input type="email" placeholder="Email" id="e" required />
+                <input type="text" pattern="+/d" placeholder="Phone" id="p" required />
+                <textarea placeholder="Message" id="m" required></textarea>
+                <button type="submit" class="site-btn" id="submit">Send Message</button>
               </form>
             </div>
           </div>
@@ -183,7 +183,20 @@
       </div>
     </section>
     <!-- Call To Action Section End -->
+  
+<script>
+  let n=document.getElementById('n');
+  let e=document.getElementById('e');
+  let p=document.getElementById('p');
+  let m=document.getElementById('m');
+  let submit= document.getElementById('submit');
+  submit.addEventListener('click',()=>{
+    if(n.value != "" && e.value != "" && p.value != "" && m.value != "" ){
+    let prepared_msg=`Name:${n.value}%0AEmail:${e.value}%0APhone:${p.value}%0A%0A${m.value}`
+    location.href=`https://api.whatsapp.com/send/?phone=+94768606403&text=${prepared_msg}`;}
+  })
 
+</script>
     <!-- Footer Section Begin -->
     <footer class="footer">
       <div class="container">

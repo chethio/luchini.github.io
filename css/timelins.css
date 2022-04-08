@@ -1849,6 +1849,7 @@ zbutton {
   width: 100%;
   min-height: 134px;
   display: block;
+  object-fit: cover;
   position: relative;
   z-index: 2;
   margin-top: 15px;
