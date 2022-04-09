@@ -732,6 +732,13 @@ ol {
   margin-bottom: 0;
 }
 
+.counter__item__text img{
+
+  width: 100px;
+  height: 100px;
+
+
+}
 /*---------------------
   Team
 -----------------------*/
