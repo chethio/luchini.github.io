@@ -214,7 +214,7 @@
   let scrollpos = window.scrollY;
   const header = document.querySelector("#navbar");
   const header_height = header.offsetHeight;
-
+let coin =document.querySelector('.coin');
   const add_class_on_scroll = () => header.classList.add("sticky");
   const remove_class_on_scroll = () => header.classList.remove("sticky");
 
@@ -222,8 +222,11 @@
     scrollpos = window.pageYOffset;
 
     if (scrollpos >= header_height - 10) {
+coin.style.display="none";
       add_class_on_scroll();
     } else {
+coin.style.display="block";
+
       remove_class_on_scroll();
     }
   });

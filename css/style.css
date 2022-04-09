@@ -2412,3 +2412,30 @@ ol {
     display: none;
   }
 }
+
+.coin {
+  height: 500px;
+  transform-style: preserve-3d;
+  -webkit-filter: drop-shadow(0px 0px 10px rgb(248, 195, 65) );
+  filter: drop-shadow(0px 0px 10px rgb(248, 195, 65));
+  transition: 3s;
+  
+  animation: infinite 10s rotate;
+}
+
+@media (max-width:992px){
+
+  .coin{display: none !important;}
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
