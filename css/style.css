@@ -734,8 +734,8 @@ ol {
 
 .counter__item__text img{
 
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 
 
 }
@@ -805,9 +805,21 @@ ol {
 /* Style the back side */
 .flip-card-back {
   padding: 30px;
-  background-color: rgb(255, 238, 0);
-  color: white;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
   transform: rotateY(180deg);
+  border: 5px solid #00ff26;
+  box-shadow: 0 0 20px #00ff26;
+  border-radius: 5px;
+}
+
+.flip-card-back h2, .flip-card-back h1 {
+  color: #00ff26;
+  
+  
+}
+.flip-card-back p {
+  color: rgb(255, 255, 255);
 }
 .team__item.team__item--second {
   margin-top: -60px;
