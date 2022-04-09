@@ -31,7 +31,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <a href="#" id="scroll" style="display: none;"><span></span></a>
+    <a href="#" id="scroll" style="display: none"><span></span></a>
     <!-- Page Preloder -->
     <div id="preloder">
       <div class="loader">
@@ -123,14 +123,36 @@
       </div>
     </header>
 
-    <script></script>
     <!-- Header End -->
-    
 
     <!-- Hero Section Begin -->
-    <div class="col-lg-6" style="position: fixed;margin-left: 50%;padding-left:5%;margin-top: 10%; z-index: 2;"><img src="img/nft-gold-coin-13066.svg" class="coin" alt="" srcset=""></div>
+    <div
+      class="col-lg-6"
+      style="
+        position: fixed;
+        margin-left: 50%;
+        padding-left: 5%;
+        margin-top: 10%;
+        z-index: 2;
+      "
+    >
+      <img src="img/nft-gold-coin-13066.svg" class="coin" alt="" srcset="" />
+    </div>
+    <script>
+      let coin = document.querySelector(".coin");
+      const header = document.querySelector("#navbar");
+      const header_height = header.offsetHeight;
+      window.addEventListener("scroll", function () {
+        scrollpos = window.pageYOffset;
 
-    <section class="hero" style="background-color:#F5D9C4">
+        if (scrollpos >= header_height+ 10) {
+          coin.style.display = "none";
+        } else {
+          coin.style.display = "block";
+        }
+      });
+    </script>
+    <section class="hero" style="background-color: #f5d9c4">
       <div class="hero__slider owl-carousel">
         <div
           class="hero__item set-bg"
@@ -142,7 +164,7 @@
               <div class="col-lg-6">
                 <div class="hero__text">
                   <h3 style="color: #ffffff">PARTY THE LION'S CLUB</h3>
-                  <h2 style="color: #F5D9C4">THE NFT COLLECTION</h2>
+                  <h2 style="color: #f5d9c4">THE NFT COLLECTION</h2>
                   <a href="buy" class="primary-btn">View Project</a>
                 </div>
               </div>
@@ -154,12 +176,10 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="hero__text">
-                  <span style="color: #FF4401
-                  "
+                  <span style="color: #ff4401"
                     >Sri Lanka's 1st Party Club-Based NFT Project.
                   </span>
-                  <h2 style="color: #FF4401
-                  ">Club-Based NFT Project</h2>
+                  <h2 style="color: #ff4401">Club-Based NFT Project</h2>
                   <a href="buy.html" class="primary-btn">Buy NFTs</a>
                 </div>
               </div>
@@ -176,29 +196,31 @@
                     NFTs, indicating the membership level.</span
                   >
                   <h2 style="color: #a05959">
-                     50 common NFTs and 19 rare NFTs
-                    </h2>
-                    <a href="gallery.html" class="primary-btn">Gallery</a>
-                  </div>
+                    50 common NFTs and 19 rare NFTs
+                  </h2>
+                  <a href="gallery.html" class="primary-btn">Gallery</a>
                 </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
     <!-- Hero Section End -->
 
     <!-- Services Section Begin -->
     <section class="services spad">
       <div class="container">
-        <div class="row " style="overflow-x: hidden">
-          <div  class="col-lg-8 video-container">
-            <video data-aos="fade-right " data-aos-duration="500" autoplay muted loop>
-              <source
-                src="img/ptl200.mp4"
-                type="video/mp4"
-              />
+        <div class="row" style="overflow-x: hidden">
+          <div class="col-lg-8 video-container">
+            <video
+              data-aos="fade-right "
+              data-aos-duration="500"
+              autoplay
+              muted
+              loop
+            >
+              <source src="img/ptl200.mp4" type="video/mp4" />
             </video>
           </div>
           <div
@@ -234,13 +256,15 @@
           data-aos-duration="100"
           class="work__item wide__item set-bg"
           data-setbg="img/gallery/25.jpg"
-        ><div class="work__item__hover">
-          <h4>VIP Auto Tires &amp; Service</h4>
-          <ul>
+        >
+          <div class="work__item__hover">
+            <h4>VIP Auto Tires &amp; Service</h4>
+            <ul>
               <li>eCommerce</li>
               <li>Magento</li>
-          </ul>
-      </div></div>
+            </ul>
+          </div>
+        </div>
         <div
           data-aos="fade-up"
           data-aos-duration="300"
@@ -328,7 +352,6 @@
     </section>
     <!-- Counter Section End -->
 
-    
     <!-- Team Section Begin -->
     <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
       <div class="container">
@@ -354,8 +377,8 @@
                   "
                 ></div>
                 <div class="flip-card-back">
-                  <h2 style="font-size: 50px;">Leoglarrix</h2>
-                  <p>The Founder of Party Lions Club </p>
+                  <h2 style="font-size: 50px">Leoglarrix</h2>
+                  <p>The Founder of Party Lions Club</p>
                 </div>
               </div>
             </div>
@@ -375,8 +398,9 @@
                   ></div>
                   <div class="flip-card-back">
                     <h1>Rins</h1>
-                    <p>Co-Founder & Head of event managemnet 
-                      Community Manager </p>
+                    <p>
+                      Co-Founder & Head of event managemnet Community Manager
+                    </p>
                   </div>
                 </div>
               </div>
@@ -396,7 +420,7 @@
                     "
                   ></div>
                   <div class="flip-card-back">
-                    <h1>Ravah Arts </h1>
+                    <h1>Ravah Arts</h1>
                     <p>NFT Graphic Designer</p>
                   </div>
                 </div>
@@ -417,7 +441,7 @@
                     "
                   ></div>
                   <div class="flip-card-back">
-                    <h1>Ravah Arts </h1>
+                    <h1>Ravah Arts</h1>
                     <p>NFT Graphic Designer</p>
                   </div>
                 </div>
@@ -817,7 +841,8 @@
                   <li>MAR 03, 2022</li>
                 </ul>
                 <p>
-                  We recently launched a new NFT collection and organizing a party for Memembers who bought our NFTs...
+                  We recently launched a new NFT collection and organizing a
+                  party for Memembers who bought our NFTs...
                 </p>
               </div>
             </div>
@@ -827,9 +852,7 @@
                 <ul>
                   <li>Apr 16, 2022</li>
                 </ul>
-                <p>
-                  launching a NFT collection for North Western
-                </p>
+                <p>launching a NFT collection for North Western</p>
               </div>
             </div>
             <div class="col-lg-4">
@@ -837,10 +860,10 @@
                 <h4>Southern Province NFT party</h4>
                 <ul>
                   <li>May 16, 2022</li>
-
                 </ul>
                 <p>
-                  We are decided to  launch a NFT collection  for our Vital clients along with a  beach party
+                  We are decided to launch a NFT collection for our Vital
+                  clients along with a beach party
                 </p>
               </div>
             </div>
@@ -851,7 +874,8 @@
                   <li>MAR 03, 2022</li>
                 </ul>
                 <p>
-                  We recently launched a new NFT collection and organizing a party for Memembers who bought our NFTs...
+                  We recently launched a new NFT collection and organizing a
+                  party for Memembers who bought our NFTs...
                 </p>
               </div>
             </div>
@@ -861,9 +885,7 @@
                 <ul>
                   <li>Apr 16, 2022</li>
                 </ul>
-                <p>
-                  launching a NFT collection for North Western
-                </p>
+                <p>launching a NFT collection for North Western</p>
               </div>
             </div>
             <div class="col-lg-4">
@@ -873,7 +895,8 @@
                   <li>May 16, 2022</li>
                 </ul>
                 <p>
-                  We have decided to  launch a NFT collection  for our Vital clients along with a  beach party
+                  We have decided to launch a NFT collection for our Vital
+                  clients along with a beach party
                 </p>
               </div>
             </div>
@@ -884,7 +907,7 @@
     <!-- Latest Blog Section End -->
 
     <!-- Call To Action Section Begin -->
-    <section class="callto spad " >
+    <section class="callto spad">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
@@ -981,7 +1004,6 @@
         </div>
         <div class="footer__copyright">
           <div class="row">
-
             <div class="col-lg-12 text-center">
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               <p class="footer__copyright__text">
@@ -998,7 +1020,6 @@
           </div>
         </div>
       </div>
-      
     </footer>
     <!-- Footer Section End -->
 

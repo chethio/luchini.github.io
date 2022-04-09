@@ -214,18 +214,18 @@
   let scrollpos = window.scrollY;
   const header = document.querySelector("#navbar");
   const header_height = header.offsetHeight;
-let coin =document.querySelector('.coin');
   const add_class_on_scroll = () => header.classList.add("sticky");
   const remove_class_on_scroll = () => header.classList.remove("sticky");
+  
 
   window.addEventListener("scroll", function () {
     scrollpos = window.pageYOffset;
 
     if (scrollpos >= header_height - 10) {
-coin.style.display="none";
+      
       add_class_on_scroll();
     } else {
-coin.style.display="block";
+    
 
       remove_class_on_scroll();
     }
@@ -235,26 +235,26 @@ coin.style.display="block";
 const gallery = document.getElementById("gallery");
 const URL = "img/gallery/";
 const footer = document.querySelector("footer");
-var curImg=1;
+var curImg = 1;
 const loadImages = (numImages = 5) => {
   let i = 1;
-  if (curImg<=50)
-  while (i <= numImages) {
-    let div1 = document.createElement("div");
-    div1.classList = "col-lg-4 col-md-6 col-sm-6 mix wp";
+  if (curImg <= 50)
+    while (i <= numImages) {
+      let div1 = document.createElement("div");
+      div1.classList = "col-lg-4 col-md-6 col-sm-6 mix wp";
 
-    let div2 = document.createElement("div");
-    div2.classList = "portfolio__item";
+      let div2 = document.createElement("div");
+      div2.classList = "portfolio__item";
 
-    let img = document.createElement("img");
-    img.src = URL+ curImg + ".jpg";
+      let img = document.createElement("img");
+      img.src = URL + curImg + ".jpg";
 
-    div2.appendChild(img);
-    div1.appendChild(div2);
-    gallery.appendChild(div1);
-    i++;
-    curImg++;
-  }
+      div2.appendChild(img);
+      div1.appendChild(div2);
+      gallery.appendChild(div1);
+      i++;
+      curImg++;
+    }
 };
 
 loadImages(5);
@@ -264,7 +264,7 @@ window.addEventListener("scroll", () => {
 
   if (
     window.scrollY + window.innerHeight >=
-    document.documentElement.scrollHeight-footer.scrollHeight
+    document.documentElement.scrollHeight - footer.scrollHeight
   ) {
     loadImages(5);
   }
