@@ -237,11 +237,7 @@ ol {
   transition: all 0.5s ease-out;
 }
 .site-btn:hover {
-
-
   background-position: left bottom;
-
-  
 }
 /* Preloder */
 #preloder {
@@ -817,6 +813,10 @@ ol {
 /* Style the back side */
 .flip-card-back {
   /* width: 90%;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   right: -10px;
   padding: 30px;
   background-color: transparent;
@@ -1026,8 +1026,7 @@ ol {
   line-height: 44px;
   text-align: center;
   margin-right: 6px;
-}  
-
+}
 
 .footer__top__social a:last-child {
   margin-right: 0;
@@ -1504,11 +1503,8 @@ ol {
   background-size: cover;
 }
 .blog__item p {
-
-  color: #13f535!important;
-font-weight: 300 !important;
-
-
+  color: #13f535 !important;
+  font-weight: 300 !important;
 }
 .blog__item:hover ul li {
   color: #ffffff;
@@ -1853,19 +1849,16 @@ font-weight: 300 !important;
   font-size: 30px;
   color: #ffffff;
 }
-.contact__widget__item__icon i:hover{
-color: #00ff26;
-
+.contact__widget__item__icon i:hover {
+  color: #00ff26;
 }
-.contact__widget__item__icon:hover{
+.contact__widget__item__icon:hover {
   color: #00ff26 !important;
   border: 5px solid #00ff26;
   box-shadow: 0 0 20px #00ff26;
-  
 }
-.contact__widget__item__icon:hover i{
+.contact__widget__item__icon:hover i {
   color: #00ff26 !important;
-  
 }
 .contact__widget__item__text {
   overflow: hidden;
