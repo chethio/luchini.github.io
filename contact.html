@@ -216,7 +216,7 @@
   let submit= document.getElementById('submit');
   submit.addEventListener('click',()=>{
     if(n.value != "" && e.value != "" && p.value != "" && m.value != "" ){
-    let prepared_msg=`Name:${n.value}%0AEmail:${e.value}%0APhone:${p.value}%0A%0A${m.value}`
+    let prepared_msg=`Name: ${n.value}%0AEmail: ${e.value}%0APhone: ${p.value}%0A%0A${m.value}`
     location.href=`https://api.whatsapp.com/send/?phone=+94768606403&text=${prepared_msg}`;}
   })
 
