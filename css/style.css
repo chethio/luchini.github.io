@@ -148,6 +148,9 @@ ol {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 .set-bg2 {
   width: 75em;
