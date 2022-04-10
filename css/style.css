@@ -222,14 +222,27 @@ ol {
   background: #00b612;
   font-family: "Play", sans-serif;
   font-weight: 700;
-  border: none;
+  border: 2px solid #00ff26;
+  min-height: 100%;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 14px 34px 12px;
   width: 100%;
+  overflow: hidden;
+  margin: 0;
+  background: linear-gradient(to right, #00ff26 50%, transparent 50%);
+  background-size: 200% 10px;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
 }
+.site-btn:hover {
 
+
+  background-position: left bottom;
+
+  
+}
 /* Preloder */
 #preloder {
   position: fixed;
@@ -405,7 +418,9 @@ ol {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #00b612;
+  background: #00ff26;
+  box-shadow: 0 0 20px #00ff26;
+
   content: "";
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -797,13 +812,12 @@ ol {
   backface-visibility: hidden;
 }
 
-
 /* Style the front side (fallback if image is missing) */
 
 /* Style the back side */
 .flip-card-back {
   /* width: 90%;*/
-  right: -10px; 
+  right: -10px;
   padding: 30px;
   background-color: transparent;
   color: rgb(255, 255, 255);
@@ -815,12 +829,12 @@ ol {
 @media (max-width: 992px) {
   .flip-card-front,
   .flip-card-back {
-    right: 0px; 
+    right: 0px;
     width: 100%;
     height: 100%;
   }
 }
-  
+
 .flip-card-back h2,
 .flip-card-back h1 {
   color: #00ff26;
@@ -954,7 +968,10 @@ ol {
 }
 .callto__text a {
   color: #ffffff;
-  background: #00b612;
+
+  /* background: #00ff26; */
+  border: 2px solid #00ff26;
+
   font-size: 15px;
   font-weight: 700;
   font-family: "Play", sans-serif;
@@ -962,8 +979,15 @@ ol {
   text-transform: uppercase;
   display: inline-block;
   padding: 14px 32px 12px;
+  background: linear-gradient(to right, #00ff26 50%, transparent 50%);
+  background-size: 200% 10px;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
 }
 
+.callto__text a:hover {
+  background-position: left bottom;
+}
 /*---------------------
   Footer
 -----------------------*/
@@ -1333,7 +1357,7 @@ ol {
   padding: 6px 22px;
 }
 .portfolio__filter li.active {
-  border: 1px solid #00b612;
+  border: 1px solid #00ff26;
 }
 .portfolio__filter li:last-child {
   margin-right: 0;
@@ -1473,8 +1497,15 @@ ol {
 }
 .blog__item:hover {
   border: 1px solid transparent !important;
-  background: url(../img/blog/blog-2.jpg) no-repeat;
+  background: url(../img/hero/3.jpg) no-repeat;
   background-size: cover;
+}
+.blog__item p {
+
+  color: #13f535!important;
+font-weight: 300 !important;
+
+
 }
 .blog__item:hover ul li {
   color: #ffffff;
@@ -2416,16 +2447,17 @@ ol {
 .coin {
   height: 500px;
   transform-style: preserve-3d;
-  -webkit-filter: drop-shadow(0px 0px 10px rgb(248, 195, 65) );
+  -webkit-filter: drop-shadow(0px 0px 10px rgb(248, 195, 65));
   filter: drop-shadow(0px 0px 10px rgb(248, 195, 65));
   transition: 3s;
-  
+
   animation: infinite 10s rotate;
 }
 
-@media (max-width:992px){
-
-  .coin{display: none !important;}
+@media (max-width: 992px) {
+  .coin {
+    display: none !important;
+  }
 }
 @keyframes rotate {
   0% {
