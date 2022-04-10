@@ -1025,7 +1025,9 @@ ol {
   line-height: 44px;
   text-align: center;
   margin-right: 6px;
-}
+}  
+
+
 .footer__top__social a:last-child {
   margin-right: 0;
 }
@@ -1837,18 +1839,33 @@ font-weight: 300 !important;
 .contact__widget__item__icon {
   height: 70px;
   width: 70px;
-  border: 1px solid rgba(225, 225, 225, 0.5);
+  border: 2px solid rgba(225, 225, 225, 0.5);
   line-height: 80px;
   text-align: center;
   border-radius: 50%;
   float: left;
   margin-right: 30px;
+  transition: 0.5s;
 }
+
 .contact__widget__item__icon i {
   font-size: 30px;
   color: #ffffff;
 }
+.contact__widget__item__icon i:hover{
+color: #00ff26;
 
+}
+.contact__widget__item__icon:hover{
+  color: #00ff26 !important;
+  border: 5px solid #00ff26;
+  box-shadow: 0 0 20px #00ff26;
+  
+}
+.contact__widget__item__icon:hover i{
+  color: #00ff26 !important;
+  
+}
 .contact__widget__item__text {
   overflow: hidden;
   padding-top: 7px;
