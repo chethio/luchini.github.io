@@ -509,8 +509,8 @@ ol {
 }
 
 .hero__item {
-  height: 100vh;
-  /* height: 684px; */
+  /* height: 1; */
+  height: 684px;
   padding-top: 255px;
 }
 
