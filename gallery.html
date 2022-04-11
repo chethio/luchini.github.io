@@ -30,8 +30,8 @@
   </head>
 
   <body>
-    <a href="#" id="scroll" style="display: none;"><span></span></a>
-     <!-- Page Preloder -->
+    <a href="#" id="scroll" style="display: none"><span></span></a>
+    <!-- Page Preloder -->
     <div id="preloder">
       <div class="loader">
         <svg
@@ -129,13 +129,12 @@
       </div>
     </header>
     <!-- Header End -->
-    
 
     <!-- Breadcrumb Begin -->
     <div
       class="breadcrumb-option spad set-bg"
       style="background-color: black; margin-bottom: -170px"
-      data-setbg="img/breadcrumb-bg.jpg"
+      data-setbg=""
     >
       <div class="container">
         <div class="row">
@@ -164,15 +163,20 @@
         <div class="row">
           <div class="col-lg-12">
             <ul class="portfolio__filter">
-              <li class="active" data-filter="*">All</li>
-              <li data-filter=".wp">Western Province</li>
-              <!-- <li data-filter=".sp">Southern Province</li>
-              <li data-filter=".nwp">North Western Province</li>
-              <li data-filter=".cp">Central Province</li> -->
+              <li id="all" class="active" data-filter="*">All</li>
+              <li id="wp" class="province" data-filter=".wp">
+                Western Province
+              </li>
+              <li id="sp"class="province" data-filter=".sp">Southern Province</li>
+              <li id="nwp" class="province" data-filter=".nwp">
+                North Western Province
+              </li>
+              <li id="cp" class="province" data-filter=".cp">Central Province</li>
             </ul>
           </div>
         </div>
-        <div id="gallery" class="row portfolio__gallery" >
+        <div id="gallery" class="row portfolio__gallery">
+          
         </div>
         <!-- <div class="row">
                 <div class="col-lg-12">
@@ -299,5 +303,6 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
   </body>
 </html>
