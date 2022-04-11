@@ -13,7 +13,7 @@ const loadImages = (numImages = 5, province) => {
   if (curImages[province] <= Images[province]) {
     while (i <= numImages) {
       let div1 = document.createElement("div");
-      div1.classList = "col-lg-4 col-md-6 col-sm-6 mix " + province;
+      div1.classList = "col-lg-4 col-md-6 col-sm-6 " + province;
 
       let div2 = document.createElement("div");
       div2.classList = "portfolio__item ";
@@ -29,6 +29,7 @@ const loadImages = (numImages = 5, province) => {
     }
   }
 };
+loadImages(5, "wp");
 
 allElement.addEventListener("click", () => {
   curImages = { wp: 1, nwp: 1, cp: 1, sp: 1 };
@@ -45,22 +46,25 @@ wpElement.addEventListener("click", () => {
 nwpElement.addEventListener("click", () => {
   curImages = { wp: 1, nwp: 1, cp: 1, sp: 1 };
 
-  gallery.innerHTML = `<div class="text-center col-lg-4 col-md-6 col-sm-6 mix sp">
-    <h1 class="text-center" style="color:#ffffff">Coming soon !</h1>
+  gallery.innerHTML = `
+  <div class="col-lg-12">
+    <h1 class="text-center" style="color:#ffffff;">Coming soon !</h1>
 </div>`;
 });
 cpElement.addEventListener("click", () => {
   curImages = { wp: 1, nwp: 1, cp: 1, sp: 1 };
 
-  gallery.innerHTML = `<div class="col-lg-4 col-md-6 col-sm-6 mix sp">
-    <h1 style="color:#ffffff">Coming soon !</h1>
+  gallery.innerHTML = `
+  <div class="col-lg-12">
+    <h1 class="text-center" style="color:#ffffff">Coming soon !</h1>
 </div>`;
 });
 spElement.addEventListener("click", () => {
   curImages = { wp: 1, nwp: 1, cp: 1, sp: 1 };
 
-  gallery.innerHTML = `<div class="col-lg-4 col-md-6 col-sm-6 mix sp">
-    <h1 style="color:#ffffff">Coming soon !</h1>
+  gallery.innerHTML = `
+  <div class="col-lg-12">
+    <h1 class="text-center" style="color:#ffffff">Coming soon !</h1>
 </div>`;
 });
 window.addEventListener("scroll", () => {
