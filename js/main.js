@@ -11,11 +11,11 @@
 
 (function ($) {
   /*------------------
-        Preloader
+        Preloader 
     --------------------*/
   $(window).on("load", function () {
     $(".loader").delay(1000).fadeOut();
-    $("#preloder").delay(200).fadeOut("slow");
+    $("#preloder").delay(1200).fadeOut("slow");
 
     /*------------------
             Portfolio filter
@@ -180,35 +180,37 @@
   var counter_seen = 0;
   $(window).scroll(() => {
     // This is then function used to detect if the element is scrolled into view
-    function elementScrolled(elem) {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-      var elemTop = $(elem).offset().top;
-      return elemTop <= docViewBottom && elemTop >= docViewTop;
-    }
+    try {
+      function elementScrolled(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+        var elemTop = $(elem).offset().top;
+        return elemTop <= docViewBottom && elemTop >= docViewTop;
+      }
 
-    // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
-    if (elementScrolled(".counter__content") && counter_seen == 0) {
-      counter_seen = 1;
-      // Your function here
-      $(".counter_num").each(function () {
-        var num = $(this).text();
-        $(this)
-          .prop("Counter", 0)
-          .animate(
-            {
-              Counter: $(this).text(),
-            },
-            {
-              duration: 4000,
-              easing: "swing",
-              step: function (now) {
-                $(this).text(Math.ceil(now));
+      // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
+      if (elementScrolled(".counter__content") && counter_seen == 0) {
+        counter_seen = 1;
+        // Your function here
+        $(".counter_num").each(function () {
+          var num = $(this).text();
+          $(this)
+            .prop("Counter", 0)
+            .animate(
+              {
+                Counter: $(this).text(),
               },
-            }
-          );
-      });
-    }
+              {
+                duration: 4000,
+                easing: "swing",
+                step: function (now) {
+                  $(this).text(Math.ceil(now));
+                },
+              }
+            );
+        });
+      }
+    } catch (error) {}
   });
 
   let scrollpos = window.scrollY;
@@ -216,61 +218,16 @@
   const header_height = header.offsetHeight;
   const add_class_on_scroll = () => header.classList.add("sticky");
   const remove_class_on_scroll = () => header.classList.remove("sticky");
-  
 
   window.addEventListener("scroll", function () {
     scrollpos = window.pageYOffset;
 
     if (scrollpos >= header_height - 10) {
-      
       add_class_on_scroll();
     } else {
-    
-
       remove_class_on_scroll();
     }
   });
 })(jQuery);
 
-const gallery = document.getElementById("gallery");
-const URL = "img/gallery/";
-const footer = document.querySelector("footer");
-var curImg = 1;
-const loadImages = (numImages = 5) => {
-  let i = 1;
-  if (curImg <= 50)
-    while (i <= numImages) {
-      let div1 = document.createElement("div");
-      div1.classList = "col-lg-4 col-md-6 col-sm-6 mix wp";
 
-      let div2 = document.createElement("div");
-      div2.classList = "portfolio__item";
-
-      let img = document.createElement("img");
-      img.src = URL + curImg + ".jpg";
-
-      div2.appendChild(img);
-      div1.appendChild(div2);
-      gallery.appendChild(div1);
-      i++;
-      curImg++;
-    }
-};
-
-loadImages(5);
-window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-  console.log(window.innerHeight);
-
-  if (
-    window.scrollY + window.innerHeight >=
-    document.documentElement.scrollHeight - footer.scrollHeight
-  ) {
-    loadImages(5);
-  }
-});
-/*<div class="col-lg-4 col-md-6 col-sm-6 mix branding">
-<div class="portfolio__item">
-<img src="img/gallery/1.jpg" alt="" srcset="">
-</div>
-</div>*/
